@@ -6,19 +6,25 @@
 <title>Home | Stewy’s Cards & Collectables</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.featured-card-section{position:relative;overflow:hidden;padding:64px 20px 82px;background:#08061a;color:#fff}
-.featured-card-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(141,44,255,.22),transparent 38%),radial-gradient(circle at 50% 75%,rgba(255,193,7,.07),transparent 34%);pointer-events:none}
+.featured-card-section{position:relative;overflow:hidden;padding:58px 20px 82px;background:radial-gradient(circle at 50% 8%,rgba(141,44,255,.28),transparent 32%),linear-gradient(180deg,#08061a 0%,#0b0820 62%,#08061a 100%);color:#fff}
+.featured-card-section:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.7) 1px,transparent 1.5px);background-size:54px 54px;opacity:.12;mask-image:linear-gradient(to bottom,black,transparent 78%);pointer-events:none}
+.featured-card-section:after{content:"";position:absolute;left:50%;bottom:-220px;transform:translateX(-50%);width:720px;height:360px;background:rgba(141,44,255,.2);filter:blur(80px);border-radius:50%;pointer-events:none}
 .featured-card-wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center}
 .featured-copy{max-width:760px}
-.featured-copy .eyebrow{letter-spacing:.18em;font-weight:900;margin:0 0 14px;color:#ffe500;font-size:13px}
+.featured-copy .eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.18em;font-weight:900;margin:0 0 14px;color:#ffe500;font-size:12px}
+.featured-copy .eyebrow:before,.featured-copy .eyebrow:after{content:"✦";font-size:11px;opacity:.8}
 .featured-copy h1{font-size:clamp(38px,5vw,62px);line-height:1.03;margin:0 0 20px;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.4)}
 .featured-copy>p:not(.eyebrow){font-size:19px;line-height:1.65;color:#ddd5eb;max-width:650px;margin:0 auto}
-.home-logo{display:block;width:min(360px,85%);height:auto;margin:0 auto 32px;filter:drop-shadow(0 12px 28px rgba(141,44,255,.32))}
-.featured-card-frame{position:relative;width:min(520px,92vw);margin:42px auto 0;padding:14px;border-radius:26px;background:#100b25;border:2px solid rgba(255,193,7,.62);box-shadow:0 0 0 5px rgba(141,44,255,.22),0 28px 70px rgba(0,0,0,.55),0 0 55px rgba(141,44,255,.22);display:flex;justify-content:center;align-items:center}
-.featured-card-frame:after{content:"";position:absolute;inset:7px;border:1px solid rgba(255,255,255,.18);border-radius:19px;pointer-events:none}
+.home-logo{display:block;width:min(360px,85%);height:auto;margin:0 auto 28px;filter:drop-shadow(0 14px 30px rgba(141,44,255,.42))}
+.featured-card-label{display:inline-block;margin:36px 0 -1px;padding:8px 16px;border:1px solid rgba(255,193,7,.55);border-bottom:0;border-radius:12px 12px 0 0;background:rgba(16,11,37,.92);color:#ffe500;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;position:relative;z-index:3}
+.featured-card-frame{position:relative;width:min(520px,92vw);margin:0 auto;padding:14px;border-radius:0 26px 26px 26px;background:linear-gradient(145deg,#1a1238,#0d0920);border:2px solid rgba(255,193,7,.68);box-shadow:0 0 0 5px rgba(141,44,255,.22),0 30px 75px rgba(0,0,0,.58),0 0 60px rgba(141,44,255,.2);display:flex;justify-content:center;align-items:center}
+.featured-card-frame:before{content:"";position:absolute;inset:7px;border:1px solid rgba(255,255,255,.16);border-radius:0 19px 19px 19px;pointer-events:none}
+.featured-card-frame:after{content:"";position:absolute;top:10px;left:10%;width:45%;height:70%;background:linear-gradient(115deg,rgba(255,255,255,.2),transparent 45%);transform:skewX(-16deg);opacity:.28;pointer-events:none;border-radius:12px}
 .featured-card-image{display:block;width:100%;max-width:100%;height:auto;border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.45);image-rendering:auto;-webkit-backface-visibility:hidden;backface-visibility:hidden}
-@media(max-width:800px){.featured-card-section{padding:48px 16px 62px}.featured-copy h1{font-size:2.45rem}.featured-copy>p:not(.eyebrow){font-size:17px}.home-logo{width:min(320px,88%);margin-bottom:25px}.featured-card-frame{width:min(500px,94vw);margin-top:34px;padding:10px;border-radius:23px}.featured-card-image{border-radius:14px}}
-@media(max-width:520px){.featured-card-section{padding:38px 12px 52px}.featured-copy h1{font-size:38px}.home-logo{width:min(310px,92%)}.featured-card-frame{width:min(500px,96vw);padding:8px;border-radius:20px;box-shadow:0 0 0 4px rgba(141,44,255,.22),0 24px 55px rgba(0,0,0,.5),0 0 42px rgba(141,44,255,.2)}}
+.featured-card-caption{margin:18px auto 0;max-width:520px;color:#bfb6cf;font-size:13px;line-height:1.5}
+.featured-card-caption strong{color:#fff}
+@media(max-width:800px){.featured-card-section{padding:46px 16px 62px}.featured-copy h1{font-size:2.45rem}.featured-copy>p:not(.eyebrow){font-size:17px}.home-logo{width:min(320px,88%);margin-bottom:24px}.featured-card-label{margin-top:30px}.featured-card-frame{width:min(500px,94vw);padding:10px;border-radius:0 23px 23px 23px}.featured-card-frame:before{border-radius:0 16px 16px 16px}.featured-card-image{border-radius:14px}}
+@media(max-width:520px){.featured-card-section{padding:38px 12px 52px}.featured-copy h1{font-size:38px}.home-logo{width:min(310px,92%)}.featured-card-label{font-size:10px;padding:7px 12px}.featured-card-frame{width:min(500px,96vw);padding:8px;border-radius:0 20px 20px 20px;box-shadow:0 0 0 4px rgba(141,44,255,.22),0 24px 55px rgba(0,0,0,.5),0 0 42px rgba(141,44,255,.2)}}
 </style>
 </head>
 <body>
@@ -35,7 +41,7 @@
   </nav>
 </header>
 <main>
-<section class="featured-card-section"><div class="featured-card-wrap"><div class="featured-copy"><img class="home-logo" src="logo.jpg" alt="Stewy’s Cards & Collectables"><p class="eyebrow">A CARD WITH A STORY</p><h1>Collecting is about more than the cards.</h1><p>Some cards are special because of what they are. Others are special because of the memories and people behind them.</p></div><div class="featured-card-frame"><img class="featured-card-image" src="1000050279.jpg?v=5" alt="Brandon's special Father's Day 2026 collector card featuring his family" fetchpriority="high" decoding="sync"></div></div></section>
+<section class="featured-card-section"><div class="featured-card-wrap"><div class="featured-copy"><img class="home-logo" src="logo.jpg" alt="Stewy’s Cards & Collectables"><p class="eyebrow">A CARD WITH A STORY</p><h1>Collecting is about more than the cards.</h1><p>Some cards are special because of what they are. Others are special because of the memories and people behind them.</p></div><div class="featured-card-label">Featured • Father’s Day 2026</div><div class="featured-card-frame"><img class="featured-card-image" src="1000050279.jpg?v=6" alt="Brandon's special Father's Day 2026 collector card featuring his family" fetchpriority="high" decoding="sync"></div><p class="featured-card-caption"><strong>Aiden, Lexi, Dad &amp; Sean</strong> — a one-of-a-kind card made for a memory that’s worth keeping forever.</p></div></section>
 <section class="section"><div class="home-grid container"><div><h2 class="title left">More Than Just Cards</h2><p>Pokémon has always been about more than what’s inside a pack. It’s about the excitement of the chase, the memories made with my kids, and the friendships and connections that come from sharing a hobby we love.</p><p>Stewy’s Cards is about bringing those experiences together and celebrating what makes collecting so much fun.</p><a class="btn" href="about.html">Meet Brandon →</a></div><div class="home-events"><h2 class="title left">Upcoming Events</h2><p>Come hang out, meet fellow collectors, and enjoy the hobby together.</p><a class="btn" href="events.html">View Events →</a></div></div></section>
 <section class="band"><div class="band-inner"><div><h2>Thanks for stopping by Stewy’s Cards.</h2><p>Take a look around, check out the upcoming events, and feel free to reach out. Whether you’re a longtime collector or just getting started, there’s always room in the community.</p></div><a class="btn" href="contact.html">Get in Touch →</a></div></section>
 </main>
