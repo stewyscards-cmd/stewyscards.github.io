@@ -6,10 +6,18 @@
 <title>Home | Stewy’s Cards & Collectables</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.featured-card-frame{display:flex;justify-content:center;align-items:center;min-height:420px}
-.featured-card-image{display:block;width:100%;max-width:395px;height:auto;max-height:665px;object-fit:contain;border-radius:18px;box-shadow:0 18px 45px rgba(0,0,0,.4);image-rendering:auto}
-.home-logo{display:block;width:min(360px,85%);height:auto;margin:0 auto 30px;filter:drop-shadow(0 10px 25px rgba(141,44,255,.3))}
-@media(max-width:800px){.featured-card-frame{min-height:0}.featured-card-image{max-width:340px;width:100%}.home-logo{width:min(320px,88%);margin-bottom:26px}}
+.featured-card-section{position:relative;overflow:hidden;padding:72px 20px 84px;background:radial-gradient(circle at 75% 45%,rgba(141,44,255,.18),transparent 34%),radial-gradient(circle at 20% 20%,rgba(255,193,7,.08),transparent 30%)}
+.featured-card-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,430px);gap:70px;align-items:center}
+.featured-copy{text-align:left}
+.featured-copy .eyebrow{letter-spacing:.16em;font-weight:800;margin-bottom:12px}
+.featured-copy h1{font-size:clamp(2.2rem,5vw,4.2rem);line-height:1.05;margin:0 0 20px}
+.featured-copy>p:not(.eyebrow){font-size:1.08rem;line-height:1.7;max-width:600px}
+.home-logo{display:block;width:min(360px,85%);height:auto;margin:0 0 34px;filter:drop-shadow(0 12px 28px rgba(141,44,255,.28))}
+.featured-card-frame{position:relative;display:flex;justify-content:center;align-items:center;padding:18px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.035));box-shadow:0 30px 70px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.25);transform:rotate(1deg)}
+.featured-card-frame:before{content:"";position:absolute;inset:-2px;border-radius:30px;background:linear-gradient(135deg,rgba(255,193,7,.65),rgba(141,44,255,.5),rgba(255,193,7,.2));z-index:-1;filter:blur(1px)}
+.featured-card-frame:after{content:"";position:absolute;inset:8px;border:1px solid rgba(255,255,255,.2);border-radius:22px;pointer-events:none}
+.featured-card-image{display:block;width:100%;max-width:395px;height:auto;max-height:665px;object-fit:contain;border-radius:18px;box-shadow:0 14px 30px rgba(0,0,0,.38);image-rendering:auto}
+@media(max-width:800px){.featured-card-section{padding:48px 18px 62px}.featured-card-wrap{grid-template-columns:1fr;gap:38px}.featured-copy{text-align:center}.home-logo{width:min(320px,88%);margin:0 auto 26px}.featured-copy h1{font-size:2.45rem}.featured-copy>p:not(.eyebrow){margin-left:auto;margin-right:auto}.featured-card-frame{max-width:370px;margin:0 auto;transform:rotate(.5deg)}}
 </style>
 </head>
 <body>
@@ -17,71 +25,19 @@
   <div class="nav-inner">
     <a class="brand" href="index.html"><img class="logo" src="logo.jpg" alt="Stewy’s Cards & Collectables"></a>
     <nav class="links">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About Me</a>
-      <a href="events.html">Events</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
+      <a class="active" href="index.html">Home</a><a href="about.html">About Me</a><a href="events.html">Events</a><a href="shop.html">Shop</a><a href="contact.html">Contact</a>
     </nav>
     <button class="menu" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
   <nav class="mobile-links" aria-label="Mobile navigation">
-    <a class="active" href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="events.html">Events</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
+    <a class="active" href="index.html">Home</a><a href="about.html">About Me</a><a href="events.html">Events</a><a href="shop.html">Shop</a><a href="contact.html">Contact</a>
   </nav>
 </header>
-
 <main>
-  <section class="featured-card-section">
-    <div class="featured-card-wrap">
-      <div class="featured-copy">
-        <img class="home-logo" src="logo.jpg" alt="Stewy’s Cards & Collectables">
-        <p class="eyebrow">A CARD WITH A STORY</p>
-        <h1>Collecting is about more than the cards.</h1>
-        <p>Some cards are special because of what they are. Others are special because of the memories and people behind them.</p>
-      </div>
-      <div class="featured-card-frame">
-        <img class="featured-card-image" src="1000050279.jpg?v=2" alt="Brandon's special Father's Day collector card featuring his family">
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="home-grid container">
-      <div>
-        <h2 class="title left">More Than Just Cards</h2>
-        <p>Pokémon has always been about more than what’s inside a pack. It’s about the excitement of the chase, the memories made with my kids, and the friendships and connections that come from sharing a hobby we love.</p>
-        <p>Stewy’s Cards is about bringing those experiences together and celebrating what makes collecting so much fun.</p>
-        <a class="btn" href="about.html">Meet Brandon →</a>
-      </div>
-      <div class="home-events">
-        <h2 class="title left">Upcoming Events</h2>
-        <p>Come hang out, meet fellow collectors, and enjoy the hobby together.</p>
-        <a class="btn" href="events.html">View Events →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="band-inner">
-      <div>
-        <h2>Thanks for stopping by Stewy’s Cards.</h2>
-        <p>Take a look around, check out the upcoming events, and feel free to reach out. Whether you’re a longtime collector or just getting started, there’s always room in the community.</p>
-      </div>
-      <a class="btn" href="contact.html">Get in Touch →</a>
-    </div>
-  </section>
+<section class="featured-card-section"><div class="featured-card-wrap"><div class="featured-copy"><img class="home-logo" src="logo.jpg" alt="Stewy’s Cards & Collectables"><p class="eyebrow">A CARD WITH A STORY</p><h1>Collecting is about more than the cards.</h1><p>Some cards are special because of what they are. Others are special because of the memories and people behind them.</p></div><div class="featured-card-frame"><img class="featured-card-image" src="1000050279.jpg?v=3" alt="Brandon's special Father's Day collector card featuring his family"></div></div></section>
+<section class="section"><div class="home-grid container"><div><h2 class="title left">More Than Just Cards</h2><p>Pokémon has always been about more than what’s inside a pack. It’s about the excitement of the chase, the memories made with my kids, and the friendships and connections that come from sharing a hobby we love.</p><p>Stewy’s Cards is about bringing those experiences together and celebrating what makes collecting so much fun.</p><a class="btn" href="about.html">Meet Brandon →</a></div><div class="home-events"><h2 class="title left">Upcoming Events</h2><p>Come hang out, meet fellow collectors, and enjoy the hobby together.</p><a class="btn" href="events.html">View Events →</a></div></div></section>
+<section class="band"><div class="band-inner"><div><h2>Thanks for stopping by Stewy’s Cards.</h2><p>Take a look around, check out the upcoming events, and feel free to reach out. Whether you’re a longtime collector or just getting started, there’s always room in the community.</p></div><a class="btn" href="contact.html">Get in Touch →</a></div></section>
 </main>
-
-<footer class="footer">
-  <strong>Stewy’s Cards & Collectables</strong><br>
-  <span>Collecting • Connecting • Sharing the hobby</span><br><br>
-  <a href="mailto:Stewyscards@gmail.com">Stewyscards@gmail.com</a><br>
-  <small>© 2026 Stewy’s Cards & Collectables</small>
-</footer>
+<footer class="footer"><strong>Stewy’s Cards & Collectables</strong><br><span>Collecting • Connecting • Sharing the hobby</span><br><br><a href="mailto:Stewyscards@gmail.com">Stewyscards@gmail.com</a><br><small>© 2026 Stewy’s Cards & Collectables</small></footer>
 <script src="content.js"></script>
-</body>
-</html>
+</body></html>
